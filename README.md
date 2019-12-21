@@ -73,7 +73,7 @@ Just install Fritz!Box Phone App on your smartphone. Check the **xxx number this
 This one is easy to solder and test. Unfortunately Wemos only wakes up on release of the button.
 
 #### a bit more
-to wake up directly on button press, you could try with this. 
+to wake up directly on button press, you could try it with a capacitor like the following. 
 ```
 
                                                           .-----------o RST
@@ -124,6 +124,11 @@ As I was working lately with ESPEasy and Tasmota I took some of their ideas. E.g
   * at least
     * set wifi data
     * add TR064 data
+
+* if running on another kind of battery adapt it
+  * if you use a TP4056 or similar take the under voltage protection into account 
+  * VMIN: min value from the battery, do not go under 2.4V.  ESP want work anymore, so 2.4 V is like dead
+  * VMAX: max voltage of the battery.
 
 ## Bugs and To-Do
 * clean up and documentation
